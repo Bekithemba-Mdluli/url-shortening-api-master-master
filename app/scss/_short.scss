@@ -1,0 +1,84 @@
+.short {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: -6rem;
+    // height: 182px;
+    padding-block: 40px;
+    background-image: url("../../images/bg-shorten-mobile.svg");
+    background-color: $VeryDarkBlue;
+    // margin-top: 50px;
+    // background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    margin-inline: 5%;
+
+    padding-inline: 24px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    @include breakpoint-up(large) {
+        flex-direction: row;
+        background-size: cover;
+        // top: 0px;
+        // width: 100%;
+        margin-top: -5rem;
+        background-image: url("../../images/bg-shorten-desktop.svg");
+    }
+
+    &__text {
+        width: 100%;
+        height: 49px;
+        padding-left: 15px;
+        background-color: $white;
+        border-radius: 5px;
+        input[type=text] {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+
+        @include breakpoint-up(large) {
+            width: 70%;
+            margin-right: 6%;
+        }
+    }
+
+    &__span {
+        color: red;
+        text-align: start;
+        width: 100%;
+        font-size: 15px;
+        margin-block: 10px;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: 28px;
+        @include breakpoint-up(large) {
+            margin-top: unset;
+        }
+        button {
+            width: 100%;
+            border-radius: 5px;
+            background-color: $primaryCyan;
+            color: $white;
+        }
+        @include breakpoint-up(large) {
+            width: 20%;
+        }
+    }
+    
+}
+
+.error {
+    border: 3px solid red;
+}
+
+.copy {
+    transition: 0.3s;
+}

@@ -1,0 +1,124 @@
+.header {
+    justify-content: space-between;
+    align-items: center;
+    min-height: 96px;
+    margin-inline: 5%;
+    // width: 100vw;
+
+
+    @include breakpoint-up(large) {
+        justify-content: unset;
+    }
+
+    &__menu {
+        height: 30px;
+        width: 30px;
+    }
+
+    &__nav {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @include breakpoint-down(medium) {
+            position: absolute;
+            // height: 400px;
+            background-color: $primaryDarkViolet;
+            flex-direction: column;
+            justify-content: unset;
+            padding-block: 38px;
+            padding-inline: 18px;
+            // margin-right: 5px;
+            border-radius: 10px;
+            width: 93%;
+        }
+
+        &-items {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            @include breakpoint-down(medium) {
+
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0px;
+            }
+
+            li {
+
+                &:not(:last-child) {
+                    margin-right: 32px;
+                }
+                @include breakpoint-down(medium) {
+                    
+                    &:not(:last-child) {
+                        margin-bottom: 44px;
+                    }
+                    // margin-right: 0px;
+                }
+            }
+            a {
+                color: $GrayishViolet;
+                font-weight: 700;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: black;
+                }
+
+                @include breakpoint-down(medium) {
+                    color: white;
+                }
+            }
+        }
+
+        &__buttons {
+            
+        @include breakpoint-down(medium) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+            &-login {
+                background-color: transparent;
+                color: $GrayishViolet;
+                @include breakpoint-down(medium) {
+                    color: white;
+                }
+            }
+
+            &-sign {
+                background-color: $primaryCyan;
+                color: $white;
+                transition: 0.3s;
+                &:hover {
+                    background-color: hsl(182, 54%, 75%);
+                }
+            }
+        }
+    }
+
+}
+
+.hr {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.027);
+    // color: red;
+    width: 100%;
+}
+
+.nav-container {
+    
+    @include breakpoint-down(medium) {
+        margin-inline: 24px;
+    } 
+}
+
+.nav-c {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}

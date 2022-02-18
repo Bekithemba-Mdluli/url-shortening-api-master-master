@@ -1,0 +1,73 @@
+.links {
+    // display: flex;
+    // flex-direction: column;
+    // margin-top: 40px;
+    // background-color: $white;
+    margin-inline: 5%;
+    // padding-block: 16px;
+
+
+    @include breakpoint-up(large) {
+        margin-inline: 0;
+    }
+
+
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        // margin-inline: 5%;
+        background-color: $white;
+        margin-bottom: 24px;
+        padding-block: 16px;
+        border-radius: 8px;
+
+        @include breakpoint-up(large) {
+            // width: 100%;
+            // margin-inline: 0;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &-link {
+            padding-block: 12px;
+            padding-inline: 16px;
+            width: 65%;
+            overflow-wrap: break-word;
+        }
+
+        &-short {
+            padding-block: 12px;
+            padding-inline: 16px;
+            color: $primaryCyan;
+        }
+
+        &-btn{
+            padding-inline: 16px;
+            button {
+                background-color: $primaryCyan;
+                color: $white;
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.link-container {
+    // background-color: bisque;
+    @include breakpoint-up(large) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color: lightgray;
+    height: 1px;
+}

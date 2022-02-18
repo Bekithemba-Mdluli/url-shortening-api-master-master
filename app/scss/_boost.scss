@@ -1,0 +1,33 @@
+.boost {
+    height: 300px;
+    width: 100%;
+    background-color: $VeryDarkBlue;
+    background-image: url("../../images/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint-up(large) {
+        background-image: url("../../images/bg-boost-desktop.svg");
+    }
+
+    h1 {
+        color: $white;
+    }
+
+    &__container {
+        margin-top: 27px;
+        &-btn {
+            color: $white;
+            background-color: $primaryCyan;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: hsl(182, 54%, 75%);
+            }
+        }
+    }
+}

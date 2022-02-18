@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <script src="./app/script/script.js" defer></script>
+</head>
+<body>
+  <header class="header flex">
+    <div class="header__logo">
+      <img src="./images/logo.svg" alt="Url shortening logo"/>
+    </div>
+
+    <nav class="header__nav flex hide-for-mobile">
+      <div class="nav-c">
+        <ul class="header__nav-items">
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Resources</a>
+          </li>
+        </ul>
+  
+        <div class="header__nav__buttons">
+          <button class="btn header__nav__buttons-login">Login</button>
+          <button class="btn header__nav__buttons-sign">Sign Up</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header__menu hide-for-desktop" onclick="toggle();">
+      <img src="./images/menu-outline.svg" alt="menu" />
+    </div>
+  </header>
+
+  <div class="nav-container hide-for hide-for-desktop hide" id="nav">
+    <nav class="header__nav flex ">
+      
+        <ul class="header__nav-items">
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Resources</a>
+          </li>
+        </ul>
+    
+        <hr class="hr"/>
+    
+        <div class="header__nav__buttons">
+          <button class="btn header__nav__buttons-login">Login</button>
+          <button class="btn header__nav__buttons-sign">Sign Up</button>
+        </div>
+    
+    </nav>
+  </div>
+
+  <div class="hero">
+    <div class="hero__image">
+      <img src="./images/illustration-working.svg" alt="Guy working on computer" />
+    </div>
+    
+    <div class="hero__container">
+      <h1>More than just shorter links</h1>
+      <p>Build your brand's recognition and get delighted insights on how your links are performning.</p>
+      <div class="hero__container-button">
+        <button class="btn">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="short">
+    <div class="short__text">
+      <input id="link" type="text" placeholder="Shortern a link here..." />
+      <span id="sp" class="short__span hide"><i>Please add a link</i></span>
+    </div>
+    
+
+    <div class="short__btn">
+      <button class="btn" onclick="getShortLink();">Shorten It!</button>
+    </div>
+  </div>
+
+  <main class="advanced">
+    <div class="links" id="links">
+      <!-- Link card -->
+      <!-- <div class="links__card">
+        <div class="links__card-link">
+          <p>www.google.com</p>
+        </div>
+        <hr class="hide-for-desktop">
+
+        <div class="link-container">
+          <div class="links__card-short">
+            <p id="ls">sh.short.lt</p>
+          </div>
+
+          <div class="links__card-btn">
+            <button class="btn">Copy</button>
+          </div>
+        </div>
+
+      </div> -->
+    </div>
+
+
+    <div class="advanced__text">
+      <h1>Advanced Statistics</h1>
+      <p>Track how your links are performing across the web with our advanced Statistics dashboard.</p>
+    </div>
+
+    <div class="advanced__stats">
+      <div class="advanced__stats-line">
+        <!-- <h1>H1</h1> -->
+      </div>
+      <div class="advanced__stats__card">
+        <div class="advanced__stats__card-image">
+          <img src="./images/icon-brand-recognition.svg" alt="brand recognision image" />
+        </div>
+        <div class="advanced__stats__card-text">
+          <h2>Brand Recognition</h2>
+          <p>Boost your brand recognition with each click. Generic links don't help instil confidence in your content</p>
+        </div>
+      </div>
+
+      <div class="advanced__stats__card second">
+        <div class="advanced__stats__card-image">
+          <img src="./images/icon-detailed-records.svg" alt="brand recognision image" />
+        </div>
+        <div class="advanced__stats__card-text">
+          <h2>Detailed Records</h2>
+          <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+        </div>
+      </div>
+
+      <div class="advanced__stats__card third">
+        <div class="advanced__stats__card-image">
+          <img src="./images/icon-fully-customizable.svg" alt="brand recognision image" />
+        </div>
+        <div class="advanced__stats__card-text">
+          <h2>Fully Customizable</h2>
+          <p>Imporve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="boost">
+    <h1>Boost your links today</h1>
+    <div class="boost__container">
+      <button class="boost__container-btn btn">Get Started</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__image">
+      <img src="./images/logo2.svg" alt="Url shortening logo" />
+    </div>
+
+    <div class="f-container">
+      <div class="footer__section">
+        <h5>Features</h5>
+        <ul>
+          <li>Link Shortening</li>
+          <li>Branded Links</li>
+          <li>Analytics</li>
+        </ul>
+      </div>
+  
+      <div class="footer__section">
+        <h5>Resources</h5>
+        <ul>
+          <li>Blog</li>
+          <li>Developers</li>
+          <li>Support</li>
+        </ul>
+      </div>
+      
+  
+      <div class="footer__section">
+        <h5>Company</h5>
+        <ul>
+          <li>About</li>
+          <li>Our Team</li>
+          <li>Careers</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__social">
+      <img src="./images/icon-facebook.svg" alt="Facebook icon" />
+      <img src="./images/icon-twitter.svg" alt="twitter icon" />
+      <img src="./images/icon-pinterest.svg" alt="pinterest icon" />
+      <img src="./images/icon-instagram.svg" alt="instagram icon" />        
+    </div>
+
+
+  </footer>
+</body>
+</html>
